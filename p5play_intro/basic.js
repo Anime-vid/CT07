@@ -21,8 +21,8 @@ function setup() {
   // --- Exercise: Age category classification ---
   let age = 9
   if (age <= 9){
-    console.log("Lower priary");
-  }else if (age <= 12){console.log("Upper priary");}else{console.log("lower priary");}
+    console.log("Lower primary");
+  }else if (age <= 12){console.log("Upper primary");}else{console.log("lower priary");}
 
   // --- Exercise: Display odd numbers backward using while loop ---
   // write your codes here
