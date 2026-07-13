@@ -4,7 +4,7 @@ function setup() {
   background(250);
   console.log("Hello");
   console.log(area);
-  text(area,100,100);
+  // text(area,100,100);
   
   // --- Exercise: Area of Triangle ---
   // write your codes here
@@ -16,6 +16,7 @@ function setup() {
       totalsum += i
     }
   console.log(totalsum)
+  Text()
 
   // --- Exercise: Age category classification ---
   // write your codes here
