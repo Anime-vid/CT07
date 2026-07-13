@@ -1,5 +1,5 @@
 function setup() {
-  var area =
+  var area = 0.5*10*5
   new Canvas(800, 800);
   background(250);
   console.log("Hello");
