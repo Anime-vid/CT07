@@ -18,7 +18,7 @@ function setup() {
   ball.vel.x = 20;
   ball.vel.y = 20;
   ball.bouncyness = 1;
-  
+  ball.collider = "dynamic"
 }
 
 function draw() {
