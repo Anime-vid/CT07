@@ -11,7 +11,7 @@ function setup() {
 
   // --- Exercise: Sum of first 10 even numbers ---
   let totalsum = 0
-  for(i = 2; i <= 20; i += 2)
+  for(i = 2; i <= 20; i += 2);
     {console.log(i);
       totalsum += i
     }
