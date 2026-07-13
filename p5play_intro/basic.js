@@ -10,9 +10,11 @@ function setup() {
   // write your codes here
 
   // --- Exercise: Sum of first 10 even numbers ---
-  v
+  let totalsum = 0
   for(i = 2; i <= 20; i += 2)
-    {console.log(i)}
+    {console.log(i);
+      to
+    }
 
   // --- Exercise: Age category classification ---
   // write your codes here
