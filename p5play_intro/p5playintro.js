@@ -15,8 +15,8 @@ function setup() {
   box.w = 50;
   box.h = 50;
   box.colour = "green"
-  ball.vel.x = 20000;
-  ball.vel.y = 200000;
+  ball.vel.x = 20000000000000000000;
+  ball.vel.y = 200000000000000000;
   ball.bouncyness = 1;
   ball.collider = "dynamic"
 }
