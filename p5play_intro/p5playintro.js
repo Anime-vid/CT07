@@ -16,7 +16,8 @@ function setup() {
   box.h = 50;
   box.colour = "green"
   ball.vel.x = 20;
-  ball
+  ball.vel.y = 20;
+  ball.bouncyness
 }
 
 function draw() {
