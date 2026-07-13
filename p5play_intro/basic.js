@@ -33,6 +33,6 @@ function setup() {
   let groceries = ["apple","bread","milk"];
   groceries.push("orange","butter");
   groceries.shift();
-  gro
+  groceries.splice(1,1,"");
 }
 
