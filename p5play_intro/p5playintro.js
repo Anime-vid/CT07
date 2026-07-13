@@ -15,7 +15,8 @@ function setup() {
   box.w = 50;
   box.h = 50;
   box.colour = "green"
-  ball.vel.x
+  ball.vel.x = 20;
+  ball
 }
 
 function draw() {
