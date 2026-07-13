@@ -10,6 +10,7 @@ function setup() {
   // write your codes here
 
   // --- Exercise: Sum of first 10 even numbers ---
+  v
   for(i = 2; i <= 20; i += 2)
     {console.log(i)}
 
