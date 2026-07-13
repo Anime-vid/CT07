@@ -15,6 +15,7 @@ function setup() {
     {console.log(i);
       totalsum += i
     }
+  console.
 
   // --- Exercise: Age category classification ---
   // write your codes here
