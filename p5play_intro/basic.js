@@ -13,7 +13,7 @@ function setup() {
   let totalsum = 0
   for(i = 2; i <= 20; i += 2)
     {console.log(i);
-      to
+      totalsum += i
     }
 
   // --- Exercise: Age category classification ---
