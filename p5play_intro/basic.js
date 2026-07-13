@@ -31,6 +31,6 @@ function setup() {
 
   // --- Exercise: Array operations (groceries) ---
   let groceries = ["apple","bread","milk"]
-  groceries.push("orange","but")
+  groceries.push("orange","butter")
 }
 
