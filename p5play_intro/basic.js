@@ -10,7 +10,8 @@ function setup() {
   // write your codes here
 
   // --- Exercise: Sum of first 10 even numbers ---
-  // write your codes here
+  for(i = 2; i <= 20; i += 2)
+    {console.log(i)}
 
   // --- Exercise: Age category classification ---
   // write your codes here
