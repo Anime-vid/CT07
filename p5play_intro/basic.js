@@ -30,6 +30,6 @@ function setup() {
   }
 
   // --- Exercise: Array operations (groceries) ---
-  let groceries = 
+  let groceries = ["","",'']
 }
 
