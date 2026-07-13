@@ -25,7 +25,10 @@ function setup() {
   }else if (age <= 12){console.log("Upper primary");}else{console.log("Secondary");}
 
   // --- Exercise: Display odd numbers backward using while loop ---
-  // write your codes here
+  for(i = 2; i <= 20; i += 2)
+    {console.log(i);
+      to
+    }
 
   // --- Exercise: Array operations (groceries) ---
   // write your codes here
