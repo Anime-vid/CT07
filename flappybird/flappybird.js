@@ -23,6 +23,7 @@ function setup() {
 
   // Alternative compact syntax from line 12 (commented out):
   // bird = new Sprite(width / 2, 200, 30, 30, 'dynamic');
+  
 }
 
 function draw() {
