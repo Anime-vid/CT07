@@ -36,5 +36,11 @@ function setup() {
   floor.img = base;
 }
 function draw() {
-  image(bg, 0, 0, width, height); // Draw the background
-}
+    image(bg, 0, 0, width, height);
+ 
+   // Apply upward push when space is pressed
+   if (kb.presses('space')) {
+     bird.vel.y = -15; // which direction do you think this is?
+     bird.sleeping = false; // wake up if sleeping
+8.   }
+9. }
