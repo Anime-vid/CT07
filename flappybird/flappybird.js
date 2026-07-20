@@ -35,20 +35,14 @@ function setup() {
   floor.collider = "static";
   floor.img = base;
 }
-function draw() {
-    image(bg, 0, 0, width, height);
- 
+ function draw() {
+  image(bg, 0, 0, width, height);
+
    // Apply upward push when space is pressed
    if (kb.presses('space')) {
      bird.vel.y = -7; // which direction do you think this is?
      bird.sleeping = false; // wake up if sleeping
    }
- }
- function draw() {
-  image(bg, 0, 0, width, height);
-
-  // . . . <previous code on keyboard press and mouse press>
-
   // Debug info (optional)
   fill("blue");
   textSize(14);
