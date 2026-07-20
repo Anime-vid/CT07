@@ -7,3 +7,30 @@ function preload() {
     bg = loadImage('assets/background-day.png');
     base = loadImage('assets/base.png');
 }
+let bg;
+let flapMidImg;
+
+function preload() {
+  // Replace these URLs with your actual image file paths
+  bg = loadImage('background.png'); 
+  flapMidImg = loadImage('bird.png');
+}
+
+function setup() {
+  new Canvas(400, 600);
+
+  // Bird Sprite
+  bird = new Sprite();
+  bird.x = width / 2;
+  bird.y = 200;
+  bird.width = 30;
+  bird.height = 30;
+  bird.img = flapMidImg; 
+
+  // Alternative compact syntax from line 12 (commented out):
+  // bird = new Sprite(width / 2, 200, 30, 30, 'dynamic');
+}
+
+function draw() {
+  image(bg, 0, 0, width, height); // Draw the background
+}
