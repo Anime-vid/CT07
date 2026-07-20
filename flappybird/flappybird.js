@@ -25,7 +25,7 @@ function setup() {
   // bird = new Sprite(width / 2, 200, 30, 30, 'dynamic');
   bird.collider = "dynamic;"
   bird.mass = 2;
-  
+  bird.drag 
 }
 
 function draw() {
