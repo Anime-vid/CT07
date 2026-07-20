@@ -13,27 +13,6 @@ let flapMidImg;
 function setup() {
   new Canvas(400, 600);
 
-  // Bird Sprite
-  bird = new Sprite();
-  bird.x = width / 2;
-  bird.y = 200;
-  bird.width = 30;
-  bird.height = 30;
-  bird.img = flapMidImg; 
-
-  // Alternative compact syntax from line 12 (commented out):
-  // bird = new Sprite(width / 2, 200, 30, 30, 'dynamic');
-  bird.collider = "dynamic;"
-  bird.mass = 2;
-  bird.drag = 0.02;
-  bird.bounciness = 0.5;
-  world.gravity.y = 10;
-
-  
-}
-function setup() {
-  new Canvas(400, 600);
-
   bird = new Sprite();
   bird.x = width / 2;
   bird.y = 200;
