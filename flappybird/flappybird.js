@@ -7,8 +7,6 @@ function preload() {
     bg = loadImage('assets/background-day.png');
     base = loadImage('assets/base.png');
 }
-let bg;
-let flapMidImg;
 
 function setup() {
   new Canvas(400, 600);
