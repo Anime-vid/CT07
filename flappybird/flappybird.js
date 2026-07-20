@@ -10,12 +10,6 @@ function preload() {
 let bg;
 let flapMidImg;
 
-function preload() {
-  // Replace these URLs with your actual image file paths
-  bg = loadImage('background.png'); 
-  flapMidImg = loadImage('bird.png');
-}
-
 function setup() {
   new Canvas(400, 600);
 
