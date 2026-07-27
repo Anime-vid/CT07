@@ -54,7 +54,7 @@ function setup() {
   text('isMoving: ' + bird.isMoving, 10, 40);
   text('sleeping: ' + bird.sleeping , 10, 60);
   if (bird.vel.y < 0){
-    bird.img = assets/yellowbird-downflap.png;
+    bird.img = downFlapImg;
   } else if (bird.vel.y > 0){
     bird.img = upFlapImg;
   }else{bird.img = flapMidImg;
