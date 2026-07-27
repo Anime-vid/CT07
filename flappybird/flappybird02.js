@@ -20,7 +20,7 @@ function setup() {
 
   // Alternative compact syntax from line 12 (commented out):
   // bird = new Sprite(width / 2, 200, 30, 30, 'dynamic');
-  bird.collider = "dynamic;"
+  bird.collider = "dynamic";
   bird.mass = 10;
   bird.drag = 0.02;
   bird.bounciness = 0.5;
