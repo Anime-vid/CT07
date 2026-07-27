@@ -59,7 +59,7 @@ function setup() {
   } else if (bird.vel.y > 0){
     bird.img = upFlapImg;
     bird.rotation = 30;
-  }else{bird.img = flapMidImg;bird.rotation = -30;
+  }else{bird.img = flapMidImg;bird.rotation = 0;
 
   }
 
