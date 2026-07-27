@@ -27,7 +27,7 @@ function setup() {
   bird.collider = "dynamic";
   bird.mass = 10;
   bird.drag = 0.02;
-  bird.bounciness = 0;
+  bird.bounciness = -100;
   world.gravity.y = 10;
 
   // Floor to bounce bird
