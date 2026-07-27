@@ -92,7 +92,7 @@ function setup() {
     pipeGroup.add(topPipe);
     topPipe.img = pipe;
     pipeGroup.layer = 0;
-    top
+    topPipe.rotation = 180
 
     
   }
