@@ -66,5 +66,15 @@ function setup() {
     bird.rotation = 0;
 
   }
+  if (frameCount === 1){
+     spawnPipePair(); // call the function
 
+
+  }
+
+  
+  function spawnPipePair(){
+    let gap = 50;
+    le
+  }
 }
