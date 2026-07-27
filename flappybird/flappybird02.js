@@ -2,6 +2,7 @@ let bird, floor; // Declaring variables for objects
 let flapMidImg, bg, base; // Declaring variables for images
 let pipeGroup;
 let bottomPipe;
+let topPipe;
 
 function preload() {
     // bird image, background and the floor
