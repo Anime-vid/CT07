@@ -44,7 +44,7 @@ function setup() {
 
    // Apply upward push when space is pressed
    if (kb.presses('space')) {
-     bird.vel.y = -7; // which direction do you think this is?
+     bird.vel.y = -10; // which direction do you think this is?
      bird.sleeping = false; // wake up if sleeping
    }
   // Debug info (optional)
