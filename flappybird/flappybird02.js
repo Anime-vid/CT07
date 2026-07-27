@@ -57,7 +57,7 @@ function setup() {
     bird.img = assets/yellowbird-downflap.png;
   } else if (bird.vel.y > 0){
     bird.img = assets/yellowbird-upflap.png
-  }else{bird.img = assets/yellowbird-midflap.png;
+  }else{bird.img = flapMidImg;
 
   }
 }
