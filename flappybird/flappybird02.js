@@ -72,9 +72,9 @@ function setup() {
 
   }
 
-  
+
   function spawnPipePair(){
     let gap = 50;
-    le
+    let midY
   }
 }
