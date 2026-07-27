@@ -11,7 +11,7 @@ function preload() {
     upFlapImg = loadImage('assets/yellowbird-upflap.png');
     bg = loadImage('assets/background-day.png');
     base = loadImage('assets/base.png');
-    pipe = loadImage('assets/pipe-get')
+    pipe = loadImage('assets/pipe-green')
 }
 
 function setup() {
