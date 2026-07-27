@@ -28,7 +28,7 @@ function setup() {
   bird.mass = 10;
   bird.drag = 0.02;
   bird.bounciness = 0;
-  world.gravity.y = 10;
+  world.gravity.y = 100;
 
   // Floor to bounce bird
   floor = new Sprite();
