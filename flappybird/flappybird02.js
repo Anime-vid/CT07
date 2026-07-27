@@ -55,10 +55,10 @@ function setup() {
   text('sleeping: ' + bird.sleeping , 10, 60);
   if (bird.vel.y < 0){
     bird.img = downFlapImg;
-    bird.rotation = -30;
+    bird.rotation = -15;
   } else if (bird.vel.y > 0){
     bird.img = upFlapImg;
-    bird.rotation = 30;
+    bird.rotation = 15;
   }else{
     bird.img = flapMidImg;
     bird.rotation = 0;
