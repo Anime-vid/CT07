@@ -60,4 +60,5 @@ function setup() {
   }else{bird.img = flapMidImg;
 
   }
+  
 }
