@@ -54,7 +54,8 @@ function setup() {
    }
   // Debug info (optional)
   bird.x += 3;
-  camera.x += 10;
+  camera.x = bird.x;
+  floor
   fill("blue");
   textSize(14);
   text('vel.y: ' + bird.vel.y.toFixed(2), 10, 20);
