@@ -67,7 +67,7 @@ function setup() {
       gameoverLabel.x = camera.x
       noLoop();
     }
-
+    world.gravity.y = 50;
     // Apply upward push when space is pressed
     if (kb.presses('space')) {
       bird.vel.y = -10;
