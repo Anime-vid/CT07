@@ -14,7 +14,7 @@ function preload() {
     bg = loadImage('assets/background-day.png');
     base = loadImage('assets/base.png');
     pipe = loadImage('assets/pipe-green.png')
-    gameoce
+    gameoverImg = loadImage()
 }
 
 function setup() {
