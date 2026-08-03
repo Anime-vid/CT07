@@ -45,7 +45,7 @@ function setup() {
   pipeGroup = new Group();
 }
  function draw() {
-  if (bird.collides(pipeGroup) )
+  if (bird.collides(pipeGroup) || bird.collides(floor))
   image(bg, 0, 0, width, height);
 
    // Apply upward push when space is pressed
