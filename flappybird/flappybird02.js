@@ -46,7 +46,7 @@ function setup() {
 }
  function draw() {
   if (bird.collides(pipeGroup) || bird.collides(floor))
-  {noLoop()}
+  {noLoop();}
   image(bg, 0, 0, width, height);
 
    // Apply upward push when space is pressed
