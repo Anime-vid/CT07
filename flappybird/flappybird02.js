@@ -82,18 +82,19 @@ function setup() {
 
 }
 
-  function spawnPipePair(){
-    let gap = 50;
-    let midY = height / 2;
-    bottomPipe = new Sprite(400,midY + gap / 2 + 200,52,320,'static');
-    bottomPipe.img = pipe;
-    pipeGroup.add(bottomPipe);
-    pipeGroup.layer = 0;
-    topPipe = new Sprite(400,midY - gap / 2 - 200,52,320,'static');
-    pipeGroup.add(topPipe);
-    topPipe.img = pipe;
-    pipeGroup.layer = 0;
-    topPipe.rotation = 180
+function spawnPipePair(){
+  let gap = 50;
+  let midY = height / 2;
+  let spawnX = bird.x + 400; // spawn off-screen ahead of the bird, not at a fixed x
 
-    
-  }
+  bottomPipe = new Sprite(spawnX, midY + gap / 2 + 200, 52, 320, 'static');
+  bottomPipe.img = pipe;
+  pipeGroup.add(bottomPipe);
+
+  topPipe = new Sprite(spawnX, midY - gap / 2 - 200, 52, 320, 'static');
+  topPipe.img = pipe;
+  topPipe.rotation = 180;
+  pipeGroup.add(topPipe);
+
+  pipeGroup.layer = 0; // only need this once, not per pipe
+}
