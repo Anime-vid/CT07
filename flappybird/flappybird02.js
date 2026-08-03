@@ -84,7 +84,7 @@ function setup() {
 
 function spawnPipePair(){
   let gap = 50;
-  let midY = random(250,height);
+  let midY = random(250,height-250);
   let spawnX = bird.x + 400; // spawn off-screen ahead of the bird, not at a fixed x
 
   bottomPipe = new Sprite(spawnX, midY + gap / 2 + 200, 52, 320, 'static');
