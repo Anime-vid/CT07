@@ -3,8 +3,8 @@ let flapMidImg, bg, base; // Declaring variables for images
 let pipeGroup;
 let bottomPipe;
 let topPipe;
-let startScreebLabel;
-let startScreen
+let startScreenLabel;
+let startScreenImg;
 
 function preload() {
     // bird image, background and the floor
@@ -17,6 +17,7 @@ function preload() {
     base = loadImage('assets/base.png');
     pipe = loadImage('assets/pipe-green.png')
     gameoverImg = loadImage('assets/gameover.png')
+    st
 }
 
 function setup() {
