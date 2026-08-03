@@ -47,7 +47,7 @@ function setup() {
   floor.collider = "static";
   floor.img = base;
   pipeGroup = new Group();
-  startScreenLabel
+  startScreenLabel = new Sprite()
 }
  function draw() {
   if (bird.collides(pipeGroup) || bird.collides(floor))
