@@ -58,7 +58,7 @@ function setup() {
     gameoverLabel = new Sprite(width/2,height/2,192,42);
     gameoverLabel.img = gameoverImg;
     gameoverLabel.layer = 100
-    gameoverLabel.x = cm
+    gameoverLabel.x = camera.x
     noLoop();
   }
   image(bg, 0, 0, width, height);
