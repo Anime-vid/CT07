@@ -52,12 +52,14 @@ function setup() {
   startScreenLabel.img = startScreenImg
 }
  function draw() {
-  if (kb.presses('space') || MouseEvent.presses()){
+  image(bg, 0, 0, width, height); // always draw background, even before game starts
+
+  if (kb.presses('space') || mouse.presses()){
     startGame = true;
     startScreenLabel.visible = false;
   }
   if (startGame){
-  if (bird.collides(pipeGroup) || bird.collides(floor))
+    if (bird.collides(pipeGroup) || bird.collides(floor))
     {
       gameoverLabel = new Sprite(width/2,height/2,192,42);
       gameoverLabel.img = gameoverImg;
@@ -65,14 +67,12 @@ function setup() {
       gameoverLabel.x = camera.x
       noLoop();
     }
-    image(bg, 0, 0, width, height);
 
-   // Apply upward push when space is pressed
+    // Apply upward push when space is pressed
     if (kb.presses('space')) {
-       bird.vel.y = -10; // which direction do you think this is?
-      bird.sleeping = false; // wake up if sleeping
+      bird.vel.y = -10;
+      bird.sleeping = false;
     }
-  // Debug info (optional)
     bird.x += 3;
     camera.x = bird.x;
     floor.x = bird.x;
@@ -87,19 +87,14 @@ function setup() {
     } else if (bird.vel.y > 0){
       bird.img = upFlapImg;
       bird.rotation = 15;
-    }else{
+    } else {
       bird.img = flapMidImg;
       bird.rotation = 0;
-
     }
     if (frameCount % 90 === 0){
-      spawnPipePair(); // call the function
-
-
+      spawnPipePair();
     }
   }
-
-
 }
 
 function spawnPipePair(){
