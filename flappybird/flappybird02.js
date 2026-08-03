@@ -54,7 +54,7 @@ function setup() {
  function draw() {
   if (kb.presses('space') || MouseEvent.presses()){
     startGame = true;
-    
+    startScreenLabel
   }
   if (bird.collides(pipeGroup) || bird.collides(floor))
   {
