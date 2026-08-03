@@ -47,7 +47,14 @@ function setup() {
  function draw() {
   if (bird.collides(pipeGroup) || bird.collides(floor))
   {
-    
+
+
+
+
+
+
+
+    game
     noLoop();
   }
   image(bg, 0, 0, width, height);
