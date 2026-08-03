@@ -53,7 +53,7 @@ function setup() {
      bird.sleeping = false; // wake up if sleeping
    }
   // Debug info (optional)
-  bird.vel.x = 10;
+  bird.x += 3;
   camera.x += 10;
   fill("blue");
   textSize(14);
