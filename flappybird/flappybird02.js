@@ -73,6 +73,10 @@ function setup() {
       bird.vel.y = -10;
       bird.sleeping = false;
     }
+    if (kb.presses('space')) {
+      bird.vel.y = -10;
+      bird.sleeping = false;
+    }
     bird.x += 3;
     camera.x = bird.x;
     floor.x = bird.x;
