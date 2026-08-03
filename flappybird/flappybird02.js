@@ -54,7 +54,7 @@ function setup() {
 
 
 
-    gameovarLabel = new Sprite
+    gameovarLabel = new Sprite(width/2,height/2)
     noLoop();
   }
   image(bg, 0, 0, width, height);
