@@ -73,7 +73,7 @@ function setup() {
       bird.vel.y = -10;
       bird.sleeping = false;
     }
-    if (kb.presses('space')) {
+    if (mouse.presses()) {
       bird.vel.y = -10;
       bird.sleeping = false;
     }
