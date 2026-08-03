@@ -56,47 +56,48 @@ function setup() {
     startGame = true;
     startScreenLabel.visible = false;
   }
+  if (startGame){
   if (bird.collides(pipeGroup) || bird.collides(floor))
-  {
-    gameoverLabel = new Sprite(width/2,height/2,192,42);
-    gameoverLabel.img = gameoverImg;
-    gameoverLabel.layer = 100
-    gameoverLabel.x = camera.x
-    noLoop();
-  }
-  image(bg, 0, 0, width, height);
+    {
+      gameoverLabel = new Sprite(width/2,height/2,192,42);
+      gameoverLabel.img = gameoverImg;
+      gameoverLabel.layer = 100
+      gameoverLabel.x = camera.x
+      noLoop();
+    }
+    image(bg, 0, 0, width, height);
 
    // Apply upward push when space is pressed
-   if (kb.presses('space')) {
-     bird.vel.y = -10; // which direction do you think this is?
-     bird.sleeping = false; // wake up if sleeping
-   }
+    if (kb.presses('space')) {
+       bird.vel.y = -10; // which direction do you think this is?
+      bird.sleeping = false; // wake up if sleeping
+    }
   // Debug info (optional)
-  bird.x += 3;
-  camera.x = bird.x;
-  floor.x = bird.x;
-  fill("blue");
-  textSize(14);
-  text('vel.y: ' + bird.vel.y.toFixed(2), 10, 20);
-  text('isMoving: ' + bird.isMoving, 10, 40);
-  text('sleeping: ' + bird.sleeping , 10, 60);
-  if (bird.vel.y < 0){
-    bird.img = downFlapImg;
-    bird.rotation = -15;
-  } else if (bird.vel.y > 0){
-    bird.img = upFlapImg;
-    bird.rotation = 15;
-  }else{
-    bird.img = flapMidImg;
-    bird.rotation = 0;
+    bird.x += 3;
+    camera.x = bird.x;
+    floor.x = bird.x;
+    fill("blue");
+    textSize(14);
+    text('vel.y: ' + bird.vel.y.toFixed(2), 10, 20);
+    text('isMoving: ' + bird.isMoving, 10, 40);
+    text('sleeping: ' + bird.sleeping , 10, 60);
+    if (bird.vel.y < 0){
+      bird.img = downFlapImg;
+      bird.rotation = -15;
+    } else if (bird.vel.y > 0){
+      bird.img = upFlapImg;
+      bird.rotation = 15;
+    }else{
+      bird.img = flapMidImg;
+      bird.rotation = 0;
 
+    }
+    if (frameCount % 90 === 0){
+      spawnPipePair(); // call the function
+
+
+    }
   }
-  if (frameCount % 90 === 0){
-     spawnPipePair(); // call the function
-
-
-  }
-
 
 
 }
