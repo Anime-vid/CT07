@@ -6,8 +6,8 @@ let topPipe;
 let startScreenLabel;
 let startScreenImg;
 let startGame = false;
-let numberImages
-let score
+let numberImages = []
+let scoreDigits ;
 
 function preload() {
     // bird image, background and the floor
