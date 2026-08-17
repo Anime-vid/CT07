@@ -9,7 +9,7 @@ let startScreenImg;
 let startGame = false;
 let numberImages = [];
 let scoreDigits;
-let score = 0; // FIX: declared and initialized
+let score = 0;
 
 function preload() {
     // bird image, background and the floor
@@ -49,7 +49,7 @@ function setup() {
   floor.img = base;
 
   pipeGroup = new Group();
-  scoreDigits = new Group(); // FIX: was never initialized, caused crash in drawScore()
+  scoreDigits = new Group();
 
   startScreenLabel = new Sprite(width / 2, height / 2, 50, 50, 'none');
   startScreenLabel.img = startScreenImg;
@@ -110,7 +110,7 @@ function draw() {
       spawnPipePair();
     }
 
-    // FIX: score-incrementing logic — count once per pipe pair when the bird passes it
+    // score-incrementing logic — count once per pipe pair when the bird passes it
     for (let p of pipeGroup) {
       if (!p.scored && p.x < bird.x) {
         p.scored = true;
@@ -127,7 +127,7 @@ function spawnPipePair() {
 
   bottomPipe = new Sprite(spawnX, midY + gap / 2 + 200, 52, 320, 'static');
   bottomPipe.img = pipe;
-  bottomPipe.scored = false; // FIX: needed for scoring logic above
+  bottomPipe.scored = false;
   pipeGroup.add(bottomPipe);
 
   topPipe = new Sprite(spawnX, midY - gap / 2 - 200, 52, 320, 'static');
@@ -147,15 +147,17 @@ function drawScore(x, y, score, digitWidth, digitHeight) {
   for (let i = 0; i < scoreStr.length; i++) {
     let digit = int(scoreStr[i]);
     let xPos = startX + i * digitWidth;
-    let digitSprite = new scoreDigits.Sprite(xPos, y, digitWidth, digitHeight);
+    let digitSprite = new scoreDigits.Sprite(xPos, y, digitWidth, digitHeight, 'none'); // FIX: was defaulting to 'dynamic', letting gravity/collisions act on the score digits
     digitSprite.img = numberImages[digit];
-  moveGroup(scoreDigits,camera.x,24);
   }
+  // FIX: moved outside the digit-creation loop — was re-running once per digit instead of once per frame
+  moveGroup(scoreDigits, camera.x, digitWidth);
 }
-function moveGroup(group,targetX,spacing) {
-  let totalWidth = (group.length -1) * spacing;
-  let startX = (targetX - totalWidth/2);
+
+function moveGroup(group, targetX, spacing) {
+  let totalWidth = (group.length - 1) * spacing;
+  let startX = (targetX - totalWidth / 2);
   for (let i = 0; i < group.length; i++) {
-    group[i].x = startX + i * spacing 
+    group[i].x = startX + i * spacing;
   }
 }
