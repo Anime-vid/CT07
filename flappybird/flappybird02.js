@@ -110,11 +110,24 @@ function draw() {
       spawnPipePair();
     }
 
-    // score-incrementing logic — count once per pipe pair when the bird passes it
+    // remove pipes once they're off-screen behind the camera
     for (let p of pipeGroup) {
-      if (!p.scored && p.x < bird.x) {
-        p.scored = true;
-        if (p === bottomPipe) score++;
+      if (p.x < bird.x - 250) {
+        p.remove();
+      }
+    }
+
+    // increase score if pipe passed (edge-based comparison, per slide)
+    for (let p of pipeGroup) {
+      // center pos + half pipe width = right edge pos
+      let pipeRightEdge = p.x + p.w / 2;
+      // center pos - half bird width = left edge pos
+      let birdLeftEdge = bird.x - bird.w / 2;
+
+      // compare x-coordinates of player and pipes
+      if (p.passed === false && pipeRightEdge < birdLeftEdge) {
+        p.passed = true;
+        if (p === bottomPipe) score++; // only count once per pipe pair
       }
     }
   }
@@ -127,13 +140,13 @@ function spawnPipePair() {
 
   bottomPipe = new Sprite(spawnX, midY + gap / 2 + 200, 52, 320, 'static');
   bottomPipe.img = pipe;
-  bottomPipe.scored = false;
+  bottomPipe.passed = false;
   pipeGroup.add(bottomPipe);
 
   topPipe = new Sprite(spawnX, midY - gap / 2 - 200, 52, 320, 'static');
   topPipe.img = pipe;
   topPipe.rotation = 180;
-  topPipe.scored = false;
+  topPipe.passed = false;
   pipeGroup.add(topPipe);
 
   pipeGroup.layer = 0; // only need this once, not per pipe
