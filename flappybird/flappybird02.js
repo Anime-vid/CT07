@@ -6,6 +6,8 @@ let topPipe;
 let startScreenLabel;
 let startScreenImg;
 let startGame = false;
+let numberImages
+let score
 
 function preload() {
     // bird image, background and the floor
@@ -19,7 +21,7 @@ function preload() {
     pipe = loadImage('assets/pipe-green.png')
     gameoverImg = loadImage('assets/gameover.png')
     startScreenImg = loadImage('assets/message.png')
-    
+
 }
 
 function setup() {
