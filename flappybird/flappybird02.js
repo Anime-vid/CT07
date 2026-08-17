@@ -121,3 +121,6 @@ function spawnPipePair(){
 
   pipeGroup.layer = 0; // only need this once, not per pipe
 }
+function drawScore(x,y,score,digitWidth,digitHeight) {
+  
+}
