@@ -56,7 +56,7 @@ function setup() {
   startScreenLabel.img = startScreenImg
 }
  function draw() {
-  drawScore(width/2,20,score)
+  drawScore(width/2,20,score,24,36)
   image(bg, 0, 0, width, height); // always draw background, even before game starts
 
   if (kb.presses('space') || mouse.presses()){
