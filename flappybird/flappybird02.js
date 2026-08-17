@@ -140,7 +140,7 @@ function spawnPipePair() {
 }
 
 function drawScore(x, y, score, digitWidth, digitHeight) {
-  moveGroup(scoreDigits,camera)
+  moveGroup(scoreDigits,camera.x,24);
   scoreDigits.removeAll();
   let scoreStr = str(score);
   let totalWidth = scoreStr.length * digitWidth;
@@ -151,4 +151,7 @@ function drawScore(x, y, score, digitWidth, digitHeight) {
     let digitSprite = new scoreDigits.Sprite(xPos, y, digitWidth, digitHeight);
     digitSprite.img = numberImages[digit];
   }
+}
+function moveGroup(group,targetX,spacing) {
+
 }
