@@ -127,7 +127,7 @@ function draw() {
       // compare x-coordinates of player and pipes
       if (p.passed === false && pipeRightEdge < birdLeftEdge) {
         p.passed = true;
-        if (p === bottomPipe) score++; // only count once per pipe pair
+        if (p.isBottom) score++; // FIX: was comparing to the global `bottomPipe`, which gets reassigned every spawn
       }
     }
   }
@@ -141,12 +141,14 @@ function spawnPipePair() {
   bottomPipe = new Sprite(spawnX, midY + gap / 2 + 200, 52, 320, 'static');
   bottomPipe.img = pipe;
   bottomPipe.passed = false;
+  bottomPipe.isBottom = true; // FIX: tag per-sprite instead of relying on the global bottomPipe reference
   pipeGroup.add(bottomPipe);
 
   topPipe = new Sprite(spawnX, midY - gap / 2 - 200, 52, 320, 'static');
   topPipe.img = pipe;
   topPipe.rotation = 180;
   topPipe.passed = false;
+  topPipe.isBottom = false;
   pipeGroup.add(topPipe);
 
   pipeGroup.layer = 0; // only need this once, not per pipe
